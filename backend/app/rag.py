@@ -26,7 +26,7 @@ groq_client = Groq(
 # QDRANT COLLECTION
 # ============================================================
 
-COLLECTION_NAME = "lecture_search"
+COLLECTION_NAME = "lecture_search_fastembed"
 
 
 # ============================================================

@@ -1,9 +1,10 @@
-from sentence_transformers import SentenceTransformer
 
+from fastembed import TextEmbedding
 
-# Load embedding model
-model = SentenceTransformer("all-MiniLM-L6-v2")
+# Load lightweight ONNX embedding model
+model = TextEmbedding(
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
+)
 
-
-def create_embedding(text):
-    return model.encode(text)
+def create_embedding(text: str):
+    return next(model.embed([text]))

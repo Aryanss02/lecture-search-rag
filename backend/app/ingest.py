@@ -1,16 +1,16 @@
 from qdrant_client.models import PointStruct
 
-from parser import read_lecture
-from chunker import create_chunks
-from embeddings import create_embedding
-from vector_db import client
+from app.parser import read_lecture
+from app.chunker import create_chunks
+from app.embeddings import create_embedding
+from app.vector_db import client
 
 
 # ============================================================
 # CONFIG
 # ============================================================
 
-COLLECTION_NAME = "lecture_search"
+COLLECTION_NAME = "lecture_search_fastembed"
 
 BATCH_SIZE = 25
 
